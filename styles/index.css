@@ -1,0 +1,155 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 84%;
+    margin: 20px auto;
+    padding: 15px 45px;
+    border-radius: 5px;
+    background-color: #e4f6fc;
+}
+
+header h2 {
+    color: gray;
+    font-size: 1.5em;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+#blog-btn {
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: #00a6ff;
+    color: white;
+    padding: 10px 30px;
+}
+
+
+/* CSS for Main Section */
+main {
+    display: flex;
+    gap: 20px;
+    width: 90%;
+}
+
+.shapeSection, main{
+    max-width: max-content;
+    margin: 0px auto;
+}
+
+.shapeSectionDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.card, #areaSection {
+    text-align: center;
+    padding: 20px 30px;
+    max-width: 220px;
+    border: 1px solid grey;
+    box-shadow: 1.5px 1.5px 1.5px gray;
+    border-radius: 5px;
+}
+
+.card:hover {
+    background-color: pink;
+    border: 1px solid black;
+}
+
+.card > img {
+    max-width: 220px;
+    max-height: 120px;
+}
+
+.card-title {
+    font-size: 1.8em;
+    margin: 4px;
+}
+
+.card-description {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.input-fields {
+    display: flex;
+    max-width: max-content;
+    margin: 0px auto;
+}
+
+.input-fields input {
+    max-width: 90px;
+    margin-right: 2px;
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #ececec;
+    /* border: none; */
+    border-radius: 5px;
+}
+
+.btn-primary {
+    font-size: 24px;
+    width: 100%;
+    margin-top: 30px;
+    padding: 6px;
+    border-radius: 5px;
+    color: white;
+    background-color: #00a6ff;
+    border: none;
+}
+
+.btn-primary:hover, #blog-btn:hover{
+    background-color: black;
+    color: white;
+}
+
+/* Area Calculation Section */
+#areaSection {
+    max-height: 100%;
+    padding: 20px 15px;
+}
+
+#areaSection h2 {
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+.area-btn {
+    padding: 6px;
+    border-radius: 5px;
+    color: white;
+    background-color: #00a6ff;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* CSS for Footer Section */
+footer {
+    background-color: black;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+#footer-description {   
+    text-align: center;
+    color: white;
+}
+
+#footer-description h3 {
+    font-size: 1.5em;
+}

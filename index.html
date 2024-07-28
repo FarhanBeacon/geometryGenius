@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genius</title>
+    <!-- CSS file link -->
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Interactive</h1>
+            <h2>Geometry Genius</h2>
+        </div>
+        <div>
+            <button id="blog-btn">Blog</button>
+        </div>
+    </header>
+    <main>
+        <!-- Shape Section -->
+        <section class="shapeSection">
+            <div class="shapeSectionDiv">
+                <!-- First Card -->
+                <div class="card">
+                    <img src="images/triangle.png" alt="triangle">
+                    <h3 class="card-title">Triangle</h3>
+                    <p class="card-description">Area (A) = 0.5 x b x h</p>
+                    <div class="input-fields">
+                        <div><input id="triangle-input-1" type="text" placeholder="b"><span style="margin-right: 8px;">cm</span></div>
+                        <div><input id="triangle-input-2" type="text" placeholder="h"><span>cm</span></div>
+                    </div>
+                    <button id="calculate-triangle" class="btn-primary">Calculate</button>
+                </div>
+                <!-- Second Card -->
+                <div class="card">
+                    <img src="images/rectangle.png" alt="rectangle">
+                    <h3 class="card-title">Rectangle</h3>
+                    <p class="card-description">Area (A) = w x l</p>
+                    <div class="input-fields">
+                        <div><input id="rectangle-input-1" type="text" placeholder="w"><span style="margin-right: 8px;">cm</span></div>
+                        <div><input id="rectangle-input-2" type="text" placeholder="l"><span>cm</span></div>
+                    </div>
+                    <button id="calculate-rectangle" class="btn-primary">Calculate</button>
+                </div>
+                <!-- Three Card -->
+                <div class="card">
+                    <img src="images/parallelogram.png" alt="parallelogram">
+                    <h3 class="card-title">Parallelogram</h3>
+                    <p class="card-description">Area (A) = b x h</p>
+                    <div class="input-fields">
+                        <div><input id="parallelogram-input-1" type="text" placeholder="b"><span style="margin-right: 8px;">cm</span></div>
+                        <div><input id="parallelogram-input-2" type="text" placeholder="h"><span>cm</span></div>
+                    </div>
+                    <button id="calculate-parallelogram" class="btn-primary">Calculate</button>
+                </div>
+                <!-- Forth Card -->
+                <div class="card">
+                    <img src="images/rhombus.png" alt="rhombus">
+                    <h3 class="card-title">Rhombus</h3>
+                    <p class="card-description">Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
+                    <div class="input-fields">
+                        <div><input id="rhombus-input-1" type="text" placeholder="d1"><span style="margin-right: 8px;">cm</span></div>
+                        <div><input id="rhombus-input-2" type="text" placeholder="d2"><span>cm</span></div>
+                    </div>
+                    <button id="calculate-rhombus" class="btn-primary">Calculate</button>
+                </div>
+                <!-- Fifth Card -->
+                <div class="card">
+                    <img src="images/pentagon.png" alt="pentagon">
+                    <h3 class="card-title">Pentagon</h3>
+                    <p class="card-description">Area (A) = 0.5 x p x b</p>
+                    <div class="input-fields">
+                        <div><input id="pentagon-input-1" type="text" placeholder="p"><span style="margin-right: 8px;">cm</span></div>
+                        <div><input id="pentagon-input-2" type="text" placeholder="b"><span>cm</span></div>
+                    </div>
+                    <button id="calculate-pentagon" class="btn-primary">Calculate</button>
+                </div>
+                <!-- Sixth Card -->
+                <div class="card">
+                    <img src="images/ellipse.png" alt="ellipse">
+                    <h3 class="card-title">Ellipse</h3>
+                    <p class="card-description">Area (A) = 3.1416 x a x b</p>
+                    <div class="input-fields">
+                        <div><input id="ellipse-input-1" type="text" placeholder="a"><span style="margin-right: 8px;">cm</span></div>
+                        <div><input id="ellipse-input-2" type="text" placeholder="b"><span>cm</span></div>
+                    </div>
+                    <button id="calculate-ellipse" class="btn-primary">Calculate</button>
+                </div>
+            </div>
+        </section>
+        <!-- area section -->
+        <section id="areaSection">
+            <h2>Area Calculation</h2>
+            <div id="triangleArea" class="hidden">
+                <p>1.Triangle<br>Area: <span id="triangleAreaValue">00</span> cm<sup>2</sup></p>
+                <p id="triangleConvertArea" class="hidden">Or, <span id="triangleConvertValue">00</span>m<sup>2</sup></p>
+                <button id="triangleConvertBtn" class="area-btn">Convert to m<sup>2</sup></button>
+                <hr>
+            </div>
+
+            <div id="rectangleArea" class="hidden">
+                <p>2.Rectangle<br>Area: <span id="rectangleAreaValue">00</span> cm<sup>2</sup></p>
+                <p id="rectangleConvertArea" class="hidden">Or, <span id="rectangleConvertValue">00</span>m<sup>2</sup></p>
+                <button id="rectangleConvertBtn" class="area-btn">Convert to m<sup>2</sup></button>
+                <hr>
+            </div>
+
+            <div id="parallelogramArea" class="hidden">
+                <p>3.Parallelogram<br>Area: <span  id="parallelogramAreaValue">00</span> cm<sup>2</sup></p>
+                <p id="parallelogramConvertArea" class="hidden">Or, <span id="parallelogramConvertValue">00</span>m<sup>2</sup></p>
+                <button id="parallelogramConvertBtn" class="area-btn">Convert to m<sup>2</sup></button>
+                <hr>
+            </div>
+
+            <div id="rhombusArea" class="hidden">
+                <p>4.Rhombus<br>Area: <span id="rhombusAreaValue">00</span> cm<sup>2</sup></p>
+                <p id="rhombusConvertArea" class="hidden">Or, <span id="rhombusConvertValue">00</span>m<sup>2</sup></p>
+                <button id="rhombusConvertBtn" class="area-btn">Convert to m<sup>2</sup></button>
+                <hr>
+            </div>
+
+            <div id="pentagonArea" class="hidden">
+                <p>5.Pentagon<br>Area: <span  id="pentagonAreaValue">00</span> cm<sup>2</sup></p>
+                <p id="pentagonConvertArea" class="hidden">Or, <span id="pentagonConvertValue">00</span>m<sup>2</sup></p>
+                <button id="pentagonConvertBtn" class="area-btn">Convert to m<sup>2</sup></button>
+                <hr>
+            </div>
+            
+            <div id="ellipseArea" class="hidden">
+                <p>6.Ellipse<br>Area: <span id="ellipseAreaValue">00</span> cm<sup>2</sup></p>
+                <p id="ellipseConvertArea" class="hidden">Or, <span id="ellipseConvertValue">00</span>m<sup>2</sup></p>
+                <button id="ellipseConvertBtn" class="area-btn">Convert to m<sup>2</sup></button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div id="footer-description">
+            <h3>Geometry Genius</h3>
+            <p>
+                Copyright © 2024 Fab <br>
+                All rights reserved
+            </p>
+        </div>
+    </footer>
+    <!-- JS file link -->
+    <script src="js/index.js"></script>
+</body>
+</html>
